@@ -1,12 +1,12 @@
 Name:           tzdata
-Version:        2016g
+Version:        2016h
 Release:        15
 License:        Public-Domain BSD-4-Clause-UC
 Summary:        Timezone database
 Url:            ftp://elsie.nci.nih.gov/pub/
 Group:          base
-Source0:        ftp://ftp.iana.org/tz/releases/tzdata2016g.tar.gz
-Source1:        ftp://ftp.iana.org/tz/releases/tzcode2016g.tar.gz
+Source0:        ftp://ftp.iana.org/tz/releases/tzdata2016h.tar.gz
+Source1:        ftp://ftp.iana.org/tz/releases/tzcode2016h.tar.gz
 Requires:       tzdata-minimal
 
 %define debug_package %{nil}
