@@ -1,6 +1,6 @@
 Name:           tzdata
 Version:        2016j
-Release:        16
+Release:        17
 License:        Public-Domain BSD-4-Clause-UC
 Summary:        Timezone database
 Url:            ftp://elsie.nci.nih.gov/pub/
