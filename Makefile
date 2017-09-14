@@ -1,6 +1,6 @@
 PKG_NAME := tzdata
-VERSION := 2014j
-TWODIGIT := 2014j
-URL := ftp://ftp.iana.org/tz/releases/tzdata2015g.tar.gz
+VERSION := 2017b
+TWODIGIT := 2017b
+URL := ftp://ftp.iana.org/tz/releases/tzdata2017b.tar.gz
 
 include ../common/Makefile.common
