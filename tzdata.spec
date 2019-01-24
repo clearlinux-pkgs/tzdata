@@ -1,12 +1,12 @@
 Name:           tzdata
-Version:        2018g
-Release:        22
+Version:        2018i
+Release:        23
 License:        Public-Domain BSD-4-Clause-UC
 Summary:        Timezone database
 Url:            ftp://elsie.nci.nih.gov/pub/
 Group:          base
-Source0:        ftp://ftp.iana.org/tz/releases/tzdata2018g.tar.gz
-Source1:        ftp://ftp.iana.org/tz/releases/tzcode2018g.tar.gz
+Source0:        ftp://ftp.iana.org/tz/releases/tzdata2018i.tar.gz
+Source1:        ftp://ftp.iana.org/tz/releases/tzcode2018i.tar.gz
 Requires:       tzdata-minimal
 
 %define debug_package %{nil}
