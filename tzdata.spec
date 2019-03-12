@@ -21,9 +21,9 @@ Summary: tzdata minimal components - UTC and zone.tab files only
 Timezone database, minimal components.
 
 %prep
-%setup -q -c %{name}-%{version}
+%setup -q -c tzdata-%{version}
 cd ../
-tar xzf %{SOURCE1} -C %{name}-%{version}
+tar xzf %{SOURCE1} -C tzdata-%{version}
 
 %build
 make %{?_smp_mflags} TZDIR=/usr/share/zoneinfo CFLAGS="%{optflags} -DHAVE_GETTEXT=1 -DTZDEFAULT='\"%{_sysconfdir}/localtime\"'"
