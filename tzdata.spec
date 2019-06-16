@@ -34,6 +34,7 @@ mkdir -p %{buildroot}/usr/share/zoneinfo
 cp -a zoneinfo %{buildroot}/usr/share/zoneinfo/posix
 cp -al %{buildroot}/usr/share/zoneinfo/posix/. %{buildroot}/usr/share/zoneinfo
 cp -a zoneinfo-leaps %{buildroot}/usr/share/zoneinfo/right
+install -m 644 zone1970.tab %{buildroot}/usr/share/zoneinfo/zone1970.tab
 install -m 644 iso3166.tab %{buildroot}/usr/share/zoneinfo/iso3166.tab
 install -m 644 zone.tab    %{buildroot}/usr/share/zoneinfo/zone.tab
 
@@ -46,4 +47,5 @@ install -m 644 zone.tab    %{buildroot}/usr/share/zoneinfo/zone.tab
 %files minimal
 /usr/share/zoneinfo/zone.tab
 /usr/share/zoneinfo/iso3166.tab
+/usr/share/zoneinfo/zone1970.tab
 /usr/share/zoneinfo/UTC
