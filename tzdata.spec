@@ -1,6 +1,6 @@
 Name:           tzdata
 Version:        2019c
-Release:        27
+Release:        28
 License:        Public-Domain BSD-4-Clause-UC
 Summary:        Timezone database
 Url:            https://www.iana.org/time-zones
