@@ -20,7 +20,7 @@ BASE_URL="https://data.iana.org/time-zones/releases"
 # (calendar year).
 TARS=$(mktemp)
 trap "rm -f $TARS" EXIT
-curl -sSf "$BASE_URL"/ | grep -Eo 'tz(code|data)[0-9]{4}[a-z]\.tar\.gz' | sort -r > $TARS
+curl -sSf "$BASE_URL"/ | grep -Eo 'tz(code|data)[0-9]{4}[a-z]\.tar\.gz' | sort -ru > $TARS
 if ! grep -q '^tzcode' $TARS; then
 	errexit "no tzcode tarballs found"
 fi
@@ -36,7 +36,7 @@ fi
 CURRENT_VERSION="$(rpmspec --srpm -q --qf="%{VERSION}" tzdata.spec)"
 
 if [[ "${CURRENT_VERSION}" = "${CODE_VER}" ]]; then
-	errexit "already up-to-date" 2
+	errexit "already up-to-date ($CODE_VER is latest)" 2
 fi
 
 sed -e "s/##VERSION##/${CODE_VER}/g" tzdata.spec.in > tzdata.spec
