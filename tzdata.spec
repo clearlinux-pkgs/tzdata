@@ -1,12 +1,12 @@
 Name:           tzdata
-Version:        2021d
-Release:        36
+Version:        2021e
+Release:        37
 License:        Public-Domain BSD-4-Clause-UC
 Summary:        Timezone database
 Url:            https://www.iana.org/time-zones
 Group:          base
-Source0:        https://data.iana.org/time-zones/releases/tzdata2021d.tar.gz
-Source1:        https://data.iana.org/time-zones/releases/tzcode2021d.tar.gz
+Source0:        https://data.iana.org/time-zones/releases/tzdata2021e.tar.gz
+Source1:        https://data.iana.org/time-zones/releases/tzcode2021e.tar.gz
 Requires:       tzdata-minimal
 
 %define debug_package %{nil}
