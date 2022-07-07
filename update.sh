@@ -1,7 +1,5 @@
 #!/bin/bash
-
-set -e
-set -o pipefail
+set -e -o pipefail
 
 PKG=tzdata
 
@@ -39,7 +37,7 @@ CURRENT_VERSION="$(rpmspec --srpm -q --qf="%{VERSION}" $PKG.spec)"
 CURRENT_RELEASE="$(rpmspec --srpm -q --qf="%{RELEASE}" $PKG.spec)"
 
 if [[ "${CURRENT_VERSION}" = "${CODE_VER}" ]]; then
-	errexit "already up-to-date ($CODE_VER is latest)" 2
+	exit
 fi
 
 sed -e "s/##VERSION##/${CODE_VER}/g;s/##RELEASE##/${CURRENT_RELEASE}/g" $PKG.spec.in > $PKG.spec
@@ -48,4 +46,4 @@ make generateupstream || errexit "failed to generate upstream" 3
 make bumpnogit
 git add $PKG.spec Makefile release upstream
 git commit -s -m "Update to ${CODE_VER}"
-make koji
+make koji-nowait
