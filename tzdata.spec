@@ -1,12 +1,12 @@
 Name:           tzdata
-Version:        2022a
-Release:        38
+Version:        2022b
+Release:        39
 License:        Public-Domain BSD-4-Clause-UC
 Summary:        Timezone database
 Url:            https://www.iana.org/time-zones
 Group:          base
-Source0:        https://data.iana.org/time-zones/releases/tzdata2022a.tar.gz
-Source1:        https://data.iana.org/time-zones/releases/tzcode2022a.tar.gz
+Source0:        https://data.iana.org/time-zones/releases/tzdata2022b.tar.gz
+Source1:        https://data.iana.org/time-zones/releases/tzcode2022b.tar.gz
 Requires:       tzdata-minimal
 
 %define debug_package %{nil}
